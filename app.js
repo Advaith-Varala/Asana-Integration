@@ -9,11 +9,6 @@ const app = express();
 
 app.use(bodyParser.json());
 
-// const ASANA_ACCESS_TOKEN = 'your_asana_access_token';
-// const ASANA_PROJECT_ID = 'your_asana_project_id';
-// const GITHUB_SECRET = 'your_github_webhook_secret';
-
-const url = 'https://advaith.com/api/1.0/webhook'
 
 app.post('/webhook', (req, res) => {
 
@@ -58,7 +53,7 @@ function createAsanaTask(issue) {
         external: {
             data: issue.html_url
         },
-        assignee: getAsanaUser(issue.user.login)
+        assignee: issue.user.login
     };
 
     axios.post('https://app.asana.com/api/1.0/tasks', data, { headers })
@@ -70,11 +65,7 @@ function createAsanaTask(issue) {
         });
 }
 
-function getAsanaUser(githubUsername) {
-    // Implement a method to map GitHub username to Asana user ID
-    
-    return githubUsername;
-}
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
