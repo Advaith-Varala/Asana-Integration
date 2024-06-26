@@ -49,7 +49,7 @@ function createAsanaTask(issue) {
     const data = {
         name: issue.title,
         notes: issue.body,
-        workspace: [process.env.ASANA_PROJECT_ID],
+        projects: [process.env.ASANA_PROJECT_ID],
         external: {
             data: issue.html_url
         },
