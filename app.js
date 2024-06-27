@@ -37,6 +37,7 @@ function verifySignature(payload, signature) {
 
 function createAsanaTask(issue) {
   const data = {
+    gid: issue.url,
     name: issue.title,
     notes: issue.body,
     projects: [process.env.ASANA_PROJECT_ID],
