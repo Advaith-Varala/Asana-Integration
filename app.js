@@ -3,7 +3,6 @@ const Asana = require("asana");
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const axios = require("axios");
 const crypto = require("crypto");
 
 const app = express();
