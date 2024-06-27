@@ -24,3 +24,7 @@ This service integrates GitHub with Asana. When a new issue is created on GitHub
   - `ASANA_PROJECT_ID`: Your Asana project ID.
   - `ASANA_WORKSPACE_ID `: Your Asana workspace ID.
   - `GITHUB_SECRET`: Your GitHub webhook secret.
+
+## Running the service
+ - Deploy the service on Render.com (cloud based platform to run your websites).
+ - Setup the Environment variables as mentioned above 
