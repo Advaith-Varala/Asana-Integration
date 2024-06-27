@@ -14,7 +14,7 @@ This service integrates GitHub with Asana. When a new issue is created on GitHub
 
 ## Usage
 
-- Create a new issue in GitHub.
+- Create a new issue in GitHub repository and submit the issue.
 - A task will be created in Asana with the issue details.
 
 ## Configuration
@@ -22,4 +22,5 @@ This service integrates GitHub with Asana. When a new issue is created on GitHub
 - Set the following environment variables:
   - `ASANA_ACCESS_TOKEN`: Your Asana access token.
   - `ASANA_PROJECT_ID`: Your Asana project ID.
+  - `ASANA_WORKSPACE_ID `: Your Asana workspace ID.
   - `GITHUB_SECRET`: Your GitHub webhook secret.
